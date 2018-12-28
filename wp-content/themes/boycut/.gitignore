@@ -13,3 +13,5 @@ public
 
 plugins
 wp-content/plugins
+wp-includes/
+wp-content/
