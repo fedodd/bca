@@ -1,0 +1,162 @@
+.teacher-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.teacher-slider {
+
+  width: 100%;
+  height: 100vh;
+  
+
+  @mixin respond-to mobile {
+    height: auto;
+  }
+}
+
+.teacher-slider .teacher {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  outline: none;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+
+  @mixin respond-to mobile {
+    height: auto;
+  }
+}
+
+.teacher-imgWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+
+  @mixin respond-to mobile {
+    height: 50vh;
+  }
+}
+
+.teacher .teacher-imgWrapper .teacher-img {
+  width: 100%;
+  height: 100%;
+  background-position-x: 0;
+  background-size: cover;
+}
+
+.teacher-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 100px;
+  width: 50%;
+  height: 100%;
+
+  @mixin respond-to mobile {
+    position: static;
+    top: 50vh;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 0;
+    padding-bottom: 40px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.teacher-subTitle {
+  margin: 0;
+  padding: 0;
+  font: var(--font-subTitle);
+  color: $color-accent;
+
+  @mixin respond-to desk {
+    opacity: $text-opacity;
+    color: inherit;
+  }
+}
+
+.teacher-mainTitle {
+  margin: 0;
+  margin-bottom: $padding-medium;
+  padding: 0;
+  font: var(--font-altTitle);
+  font-family: 'FlounderPro';
+  white-space: pre-line;
+  
+  @mixin respond-to large {
+    margin-bottom: 40px;
+  }
+}
+
+.teacher-descr {
+  margin: 0;
+  margin-bottom: 20px;
+  font: var(--font-text);
+
+  @mixin respond-to desk {
+    margin-bottom: 30px;
+    max-width: 800px;
+  }
+}
+
+.teacher-buttons {
+  margin-top: 20px;
+
+  @mixin respond-to desk {
+    margin-top: 40px;
+  }
+}
+
+#teacherSlider {
+  margin-bottom: 0;
+}
+
+
+.slick-prev.teacher-prev {
+  display: none;
+}
+
+.slick-next.teacher-next {
+  position: absolute;
+  top: 15%;
+  right: 25px;
+  transform: translateX(-100%);
+
+  @mixin respond-to desk {
+    top: 35%;
+    right: 50px;
+  }
+
+  &:focus::before {
+    opacity: .75;
+  }
+
+    &:hover::before {
+    opacity: 1;
+  }
+  
+  &::before {
+    font-family: 'FlounderPro';
+    font-size: 78px;
+    opacity: .75;
+    color: white;
+
+    @mixin respond-to desk {
+      font-size: 112px;
+    }
+  }
+}

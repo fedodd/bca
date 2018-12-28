@@ -1,0 +1,40 @@
+
+.social-link {
+  position: relative;
+  z-index: 100;
+  outline: none;
+  font: var(--font-text);
+  text-decoration: none;
+  color: inherit;
+
+  & span:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+}
+
+.footer-link svg,
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+
+  @mixin respond-to desk {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.social-icon {
+  fill: #ffffff;
+  fill-rule: evenodd;
+
+
+  .footer-line  & {
+    fill: $color-footer;
+  }
+}

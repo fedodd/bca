@@ -1,0 +1,8 @@
+{
+  "assets": {
+    "app": [
+      "./resources/assets/js/index.js",
+      "./resources/assets/sass/common.pcss"
+    ]
+  }
+}

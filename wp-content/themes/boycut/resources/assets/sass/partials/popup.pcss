@@ -1,0 +1,97 @@
+.popup {
+  position: absolute;
+  top: 0;
+  right: -3000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .93);
+  transition: .3s;
+  
+  &.is__active {
+    position: fixed;
+    right: 0;
+  }
+}
+
+.popup-title {
+  margin-bottom: 30px;
+  font: normal 30px/1.3 'FlounderPro', sans-serif;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @mixin respond-to desk {
+    padding: 30px;
+  }
+}
+
+.form .popup-input {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  width: 290px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .7) !important;
+  border-radius: 0;
+  outline: none;
+  font: normal 24px/24px 'Circe', sans-serif;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  background-color: transparent !important;
+  caret-color: white !important;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, .7);
+  }
+}
+
+.wpcf7-form-control-wrap {
+  display: flex;
+}
+
+.screen-reader-response {
+  display: none;
+}
+
+[role="alert"] {
+  position: absolute;
+  bottom: 0;
+  left: 3vw;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  border: 0 !important;
+  color: #fff;
+  transform: translateY(100%);
+
+  .popup & {
+    transform: translateY(80%);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  color: white;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white;
+}

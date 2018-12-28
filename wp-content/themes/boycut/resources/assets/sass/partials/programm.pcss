@@ -1,0 +1,198 @@
+.program-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.program-slider {
+  width: 100%;
+  height: 100vh;
+}
+
+.program-slider .program {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+}
+
+.program-imgWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+}
+
+.program .program-imgWrapper .program-img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.program-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: $padding-medium 15px 0;
+  height: 100%;
+  text-align: center;
+
+  @mixin respond-to desk {
+    align-items: flex-start;
+    padding: 9vh 0 50px;
+    padding-left: 120px;
+    width: 50%;
+    text-align: left;
+  }
+}
+
+.program-title {
+  display: none;
+  margin-bottom: auto;
+  font-size: 16px;
+  font-weight: bold;
+
+  @mixin respond-to desk {
+    display: block;
+  }
+}
+
+.program-subTitle {
+  align-self: flex-start;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font: var(--font-subTitle);
+  color: $color-accent;
+
+  @mixin respond-to desk {
+    margin-bottom: 0;
+  }
+}
+
+.program-mainTitle {
+  margin: 0 0 $padding-medium;
+  padding: 0;
+  font: var(--font-altTitle);
+
+  @mixin respond-to desk {
+    margin: 0 0 30px;
+  }
+
+  @mixin respond-to large {
+    margin-bottom: 50px;
+  }
+}
+
+.program-descr {
+  margin: 0;
+  margin-bottom: auto;
+  font: var(--font-text);
+  color: $color-grey;
+
+  @mixin respond-to desk {
+    margin-bottom: auto;
+    max-width: 800px;
+  }
+
+  & span {
+    display: none;
+
+    @mixin respond-to desk {
+      display: inline;
+    }
+  }
+}
+
+.program-pricing {
+  margin-bottom: auto;
+
+  @mixin respond-to desk {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-bottom: unset;
+    padding-right: 60px;
+    width: 100%;
+    text-align: center;
+    transform: translateX(100%);
+  }
+
+  & .is__extra {
+    display: block;
+    font: normal 30px/1.3 'FlounderProItalic', sans-serif;
+    font-size: 26px;
+    color: $color-grey;
+
+    @mixin respond-to desk {
+      font-size: 30px;
+    }
+  }
+}
+
+.program-value {
+  position: relative;
+  display: inline-block;
+  padding-right: 5px;
+  font: normal 30px/1.3 'FlounderProItalic', sans-serif;
+  color: $color-grey;
+
+  @mixin respond-to desk {
+    padding-right: 40px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 5px;
+      height: 100%;
+      background-color: $color-accent;
+      content: '';
+      transform: rotate(10deg);
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
+  }
+
+  @mixin respond-to large {
+    margin-right: 20px;
+    padding-right: 40px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  & strong {
+    display: block;
+    font: var(--font-altTitle);
+    font-family: 'FlounderProItalic', sans-serif;
+    text-align: center;
+    color: $color-grey__alt;
+
+    & span {
+      font: normal 30px/1.3 'FlounderProItalic', sans-serif;
+      color: $color-grey;
+    }
+  }
+}
+
+#programSlider {
+  margin-bottom: 0;
+}

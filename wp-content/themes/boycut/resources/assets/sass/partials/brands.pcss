@@ -1,0 +1,23 @@
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+
+  @mixin respond-to desk {
+    padding: 80px 20px 40px;
+  }
+}
+
+.brand {
+  width: 50%;
+
+  @mixin respond-to desk {
+    width: 25%;
+  }
+
+  & img {
+    fill: #8d8d8d;
+  }
+
+}

@@ -1,0 +1,112 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.banner-sliders {
+  width: 100%;
+  height: inherit;
+
+  &#bannerSliders {
+    margin-bottom: 0;
+  }
+}
+
+.banner .banner-slider {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+}
+
+.banner-text {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-bottom: 5vh;
+  box-sizing: border-box;
+  width: unset;
+  height: 50%;
+  text-align: center;
+
+  @mixin respond-to desk {
+    top: calc(50%-75px);
+    justify-content: space-between;
+    padding-bottom: 0;
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.banner-title {
+  margin: 24px 0;
+  padding: 0;
+  font: var(--font-mainTitle);
+  white-space: pre-line;
+
+  @mixin respond-to desk {
+    display: none;
+  }
+
+  & br {
+    display: none;
+
+    @mixin respond-to desk {
+      display: inline;
+    }
+  }
+}
+
+.banner-imgWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+  background-position: center;
+}
+
+.banner-slider .banner-imgWrapper .banner-img {
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-size: cover;
+}
+
+.banner-subtitle {
+  display: none;
+  margin: 0;
+  max-width: 750px;
+  font: var(--font-banner);
+  text-align: center;
+  opacity: $text-opacity;
+
+  @mixin respond-to desk {
+    display: block;
+  }
+
+  @mixin respond-to large {
+    margin-top: auto;
+  }
+}
+
+.banner-logo {
+  width: 180px;
+
+  @mixin respond-to desk {
+    width: 300px;
+  }
+}

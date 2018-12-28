@@ -1,0 +1,26 @@
+@import './vendors/*.pcss';
+@import './tech/*.pcss';
+@import './partials/**/*.pcss';
+@import './partials/*.pcss';
+
+html, body {
+  height: 100%;
+  font: $font;
+  background-color: $color-black__alt;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.holder {
+  margin: 0 $padding-smaller;
+
+  @mixin respond-to desk {
+    margin: 0 $padding-big;
+  }
+}
+
+:hover {
+  transition: .3s;
+}

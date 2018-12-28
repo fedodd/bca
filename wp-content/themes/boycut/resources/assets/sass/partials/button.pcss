@@ -1,0 +1,37 @@
+.button {
+  padding: 7px 0 9px;
+  width: 170px;
+  border: none;
+  border: 2px solid white;
+  outline: none;
+  font: var(--font-button);
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+  
+  @mixin respond-to desk {
+    padding: 11px 0 13px;
+    width: 240px;
+  }
+
+  .form & {
+    margin-top: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+
+  .teacher-buttons & {
+    margin-right: 0;
+    margin-bottom: 10px;
+
+    @mixin respond-to desk {
+      margin-right: 20px;
+    }
+  }
+}
+
+ 

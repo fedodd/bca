@@ -1,0 +1,38 @@
+.gallery {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gallery-item {
+  width: 50vw;
+  height: 32vw;
+  word-spacing: 0;
+  background-position: center;
+  background-size: cover;
+
+  @mixin respond-to desk {
+    width: 33.3%;
+    height: 22vw;
+  }
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-buttons {
+  position: static;
+  margin: 40px auto 0;
+
+  @mixin respond-to desk {
+    position: absolute;
+    bottom: 9vw;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%);
+  }
+}

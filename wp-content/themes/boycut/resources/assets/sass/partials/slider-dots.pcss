@@ -1,0 +1,90 @@
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+}
+
+.slider-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $color-black;
+  transition: $time;
+  
+  &:only-child {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+  &.slick-active {
+    background-color: white;
+  }
+
+  & button {
+    display: none;
+  }
+}
+
+.banner .banner-slider:focus {
+  outline: 0;
+}
+
+.program-dots {
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  margin: 0;
+  padding: 0;
+
+  @mixin respond-to desk {
+    top: unset;
+    bottom: 20px;
+  }
+
+  @mixin respond-to large {
+    bottom: 50px;
+  }
+}
+
+.program-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 7px;
+  padding: 6px 12px 8px 10px;
+  border: 2px solid transparent;
+  font: normal 28px/28px 'FlounderProItalic', sans-serif;
+  color: rgb(221, 222, 227);
+  transition: $time;
+  
+  &:only-child {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: rgb(221, 222, 227);
+    color: rgb(221, 222, 227);
+  }
+
+  &.slick-active {
+    border-color: rgb(221, 222, 227);
+  }
+
+  & button {
+    display: none;
+  }
+}
+
+.program-slider .program:focus {
+  outline: 0;
+}
