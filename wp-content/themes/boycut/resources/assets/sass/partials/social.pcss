@@ -19,13 +19,23 @@
 
 .footer-link svg,
 .social-link svg {
+  margin-right: 5px;
   width: 20px;
   height: 20px;
   vertical-align: top;
 
   @mixin respond-to desk {
+    margin-right: 10px;
     width: 28px;
     height: 28px;
+  }
+}
+
+.footer-link svg {
+  margin-right: 0;
+
+  @mixin respond-to desk {
+    margin-right: 10px;
   }
 }
 

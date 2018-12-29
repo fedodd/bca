@@ -11,8 +11,6 @@ const toggleBlockEnroll = ['popupEnroll'];
 toggle('.button.is__enroll', toggleBlockEnroll, ['formEnroll']);
 toggle('PopupCloseEnroll', toggleBlockEnroll);
 
-
-
 $(document).ready(function () {
   $('.banner-sliders').slick({
     dots: true,
@@ -50,7 +48,7 @@ $(document).ready(function () {
     arrows: true,
     dots: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     pauseOnHover: false,
     pauseOnDotsHover: true,
     speed: 500,

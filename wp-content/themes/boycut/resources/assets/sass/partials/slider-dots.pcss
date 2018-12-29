@@ -42,29 +42,54 @@
 .program-dots {
   position: absolute;
   top: 25px;
-  left: 100px;
   margin: 0;
   padding: 0;
+  width: 100%;
+  text-align: center;
 
   @mixin respond-to desk {
     top: unset;
     bottom: 20px;
+    left: 100px;
+    width: unset;
+    text-align: left;
   }
 
   @mixin respond-to large {
     bottom: 50px;
   }
+
+  &::before {
+    display: inline-block;
+    margin-right: 30px;
+    font: var(--font-subTitle);
+    text-transform: uppercase;
+    color: $color-accent;
+    content: 'Курс';
+
+    @mixin respond-to desk {
+      display: none;
+    }
+  }
+
 }
 
 .program-dots li {
   position: relative;
   display: inline-block;
   margin: 0 7px;
-  padding: 6px 12px 8px 10px;
+  width: 30px;
+  height: 30px;
   border: 2px solid transparent;
-  font: normal 28px/28px 'FlounderProItalic', sans-serif;
+  font: var(--font-numbers);
+  text-align: center;
   color: rgb(221, 222, 227);
   transition: $time;
+
+  @mixin respond-to desk {
+    width: 37px;
+    height: 37px;
+  }
   
   &:only-child {
     display: none;

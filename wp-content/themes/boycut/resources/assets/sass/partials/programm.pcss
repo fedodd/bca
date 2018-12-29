@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: $padding-medium 15px 0;
+  padding: $padding-medium 15px;
   height: 100%;
   text-align: center;
 
@@ -70,6 +70,7 @@
 }
 
 .program-subTitle {
+  display: none;
   align-self: flex-start;
   margin: 0;
   margin-bottom: 30px;
@@ -78,12 +79,26 @@
   color: $color-accent;
 
   @mixin respond-to desk {
+    display: block;
     margin-bottom: 0;
   }
+
+  &.is__mobile { 
+    position: absolute;
+    top: 22px;
+    left: 50px;
+    display: block;
+    margin: 0;
+
+    @mixin respond-to desk {
+      display: none;
+    }
+  }
+
 }
 
 .program-mainTitle {
-  margin: 0 0 $padding-medium;
+  margin: 14vh 0 25px;
   padding: 0;
   font: var(--font-altTitle);
 
@@ -98,7 +113,7 @@
 
 .program-descr {
   margin: 0;
-  margin-bottom: auto;
+  margin-bottom: 4vh;
   font: var(--font-text);
   color: $color-grey;
 
@@ -124,7 +139,7 @@
     top: 50%;
     right: 0;
     margin-bottom: unset;
-    padding-right: 60px;
+    padding-right: 40px;
     width: 100%;
     text-align: center;
     transform: translateX(100%);
@@ -132,11 +147,13 @@
 
   & .is__extra {
     display: block;
-    font: normal 30px/1.3 'FlounderProItalic', sans-serif;
-    font-size: 26px;
+    margin: 0;
+    margin-top: 1vh;
+    font: normal 24px/1.3 'FlounderProItalic', sans-serif;
     color: $color-grey;
 
     @mixin respond-to desk {
+      margin-top: 25px;
       font-size: 30px;
     }
   }
@@ -174,7 +191,7 @@
     padding-right: 40px;
   }
 
-  &:last-child {
+  &:last-of-type {
     margin-right: 0;
     padding-right: 0;
   }
