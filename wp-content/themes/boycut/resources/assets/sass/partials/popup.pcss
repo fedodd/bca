@@ -56,6 +56,18 @@
   }
 }
 
+.wpcf7 p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+
+  & br {
+    display: none;
+  }
+}
+
 .wpcf7-form-control-wrap {
   display: flex;
 }
@@ -66,18 +78,15 @@
 
 [role="alert"] {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left: 3vw;
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
   border: 0 !important;
+  font: var(--font-text);
   color: #fff;
   transform: translateY(100%);
-
-  .popup & {
-    transform: translateY(80%);
-  }
 }
 
 input:-webkit-autofill,
@@ -95,4 +104,10 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
   -webkit-text-fill-color: white;
+}
+
+div.wpcf7 .ajax-loader {
+  position: absolute;
+  display: none;
+  transition: 0s;
 }

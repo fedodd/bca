@@ -74,13 +74,10 @@
     <div class="popup-close" id="PopupCloseEnroll">
       <span class="popup-closeElem"></span>
     </div>
-    <form class="form" id="formEnroll">
+    <div class="form" id="formEnroll">
       <h3 class="popup-title">Запись на обучение</h3>
-      <label><input type="text" class="popup-input" placeholder="Имя"></label>
-      <label><input type="text" class="popup-input" placeholder="Контактный номер"></label>
-      <label><input type="text" class="popup-input" placeholder="Электронная почта"></label>
-      <input type="submit" class="button" value="отправить">
-    </form>
+      <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
+    </div>
   </div>
 </div>
 <div class="gallery">
@@ -96,13 +93,10 @@
     <div class="popup-close" id="PopupCloseCut">
       <span class="popup-closeElem"></span>
     </div>
-    <form class="form" id="formCut">
+    <div class="form" id="formCut">
       <h3 class="popup-title">Бесплатная стрижка</h3>
-      <label><input type="text" class="popup-input" placeholder="Имя"></label>
-      <label><input type="text" class="popup-input" placeholder="Контактный номер"></label>
-      <label><input type="text" class="popup-input" placeholder="Электронная почта"></label>
-      <input type="submit" class="button" value="отправить">
-    </form>
+      <?php echo do_shortcode('[contact-form-7 id="95" title="Contact form 2"]'); ?>
+    </div>
   </div>
   <div class="gallery-buttons">
     <button type="button" class="button is__cut">Бесплатная стрижка</button>

@@ -6,12 +6,22 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+  max-height: 530px;
   color: white;
+
+  @mixin respond-to desk {
+    max-height: unset;
+  }
 }
 
 .program-slider {
   width: 100%;
   height: 100vh;
+  max-height: 530px;
+
+  @mixin respond-to desk {
+    max-height: unset;
+  }
 }
 
 .program-slider .program {
@@ -19,9 +29,14 @@
   z-index: 200;
   width: 100%;
   height: 100vh;
+  max-height: 530px;
   background-attachment: fixed;
   background-position: center;
   background-size: 100%;
+
+  @mixin respond-to desk {
+    max-height: unset;
+  }
 }
 
 .program-imgWrapper {
@@ -139,7 +154,7 @@
     top: 50%;
     right: 0;
     margin-bottom: unset;
-    padding-right: 40px;
+    padding-right: 50px;
     width: 100%;
     text-align: center;
     transform: translateX(100%);
