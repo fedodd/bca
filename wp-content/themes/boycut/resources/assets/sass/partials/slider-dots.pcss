@@ -5,6 +5,17 @@
   margin: 0;
   padding: 0;
   transform: translateX(-50%);
+
+  .teacher-wrapper &.is__teacher {
+    top: calc(50vh - 35px);
+    bottom: auto;
+    
+    display: block !important;
+
+    @mixin respond-to desk {
+      display: none !important;
+    }
+  }
 }
 
 .slider-dots li {
@@ -76,8 +87,11 @@
 
 .program-dots li {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 7px;
+  padding-bottom: 1px;
   width: 30px;
   height: 30px;
   border: 2px solid transparent;
@@ -87,6 +101,7 @@
   transition: $time;
 
   @mixin respond-to desk {
+    padding-bottom: 2px;
     width: 37px;
     height: 37px;
   }

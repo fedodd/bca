@@ -28,11 +28,18 @@
   background-attachment: fixed;
   background-position: center;
   background-size: 100%;
+  transition-delay: 0.5s;
 
   @mixin respond-to mobile {
     height: auto;
   }
+
+  &:not(.slick-current) {
+    transition-delay: 0;
+  }
 }
+
+
 
 .teacher-imgWrapper {
   width: 100%;
@@ -109,7 +116,8 @@
 
   @mixin respond-to desk {
     margin-bottom: 30px;
-    max-width: 800px;
+    padding-right: 50px;
+    max-width: 850px;
   }
 }
 
@@ -134,11 +142,17 @@
   position: absolute;
   top: 15%;
   right: 25px;
+  display: none !important;
+  width: 60px;
+  height: 120px;
+  transition: $time;
   transform: translateX(-100%);
 
   @mixin respond-to desk {
     top: 35%;
-    right: 50px;
+    right: 4vw;
+    display: block !important;
+    transform: translateX(0%);
   }
 
   &:focus::before {

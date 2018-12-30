@@ -31,9 +31,11 @@
    vertical-align: center;
    text-decoration: none;
    color: $color-footer;
+   transition: $time;
     
   &:hover {
     opacity: .5;
+
 
     .footer-line.is__alt & {
       opacity: 1;
@@ -68,6 +70,7 @@
 
   &.is__alt {
     display: flex;
+    transition: $time;
 
     &:hover {
       opacity: .5;

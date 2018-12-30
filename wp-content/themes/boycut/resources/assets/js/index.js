@@ -46,7 +46,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.teacher-slider').slick({
     arrows: true,
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: false,
     pauseOnHover: false,
@@ -54,7 +54,8 @@ $(document).ready(function () {
     speed: 500,
     autoplaySpeed: 5000,
     nextArrow: '<button type="button" class="slick-next teacher-next"></button>',
-    prevArrow: '<button type="button" class="slick-prev teacher-prev"></button>'
+    prevArrow: '<button type="button" class="slick-prev teacher-prev"></button>',
+    dotsClass: 'slider-dots is__teacher'
   });
 });
 

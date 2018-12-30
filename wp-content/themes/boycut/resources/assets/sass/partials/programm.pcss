@@ -149,12 +149,12 @@
     display: block;
     margin: 0;
     margin-top: 1vh;
-    font: normal 24px/1.3 'FlounderProItalic', sans-serif;
+    font: var(--font-textAlt);
     color: $color-grey;
+    
 
     @mixin respond-to desk {
       margin-top: 25px;
-      font-size: 30px;
     }
   }
 }
@@ -162,12 +162,15 @@
 .program-value {
   position: relative;
   display: inline-block;
+  margin-right: 10px;
   padding-right: 5px;
-  font: normal 30px/1.3 'FlounderProItalic', sans-serif;
+  font: var(--font-textAlt);
   color: $color-grey;
-
+  
   @mixin respond-to desk {
+    margin: 10px;
     padding-right: 40px;
+
 
     &::after {
       position: absolute;
@@ -191,6 +194,10 @@
     padding-right: 40px;
   }
 
+  &:last-of-type::after {
+    margin-right: 0;
+  }
+
   &:last-of-type {
     margin-right: 0;
     padding-right: 0;
@@ -204,7 +211,7 @@
     color: $color-grey__alt;
 
     & span {
-      font: normal 30px/1.3 'FlounderProItalic', sans-serif;
+      font: var(--font-textAlt);
       color: $color-grey;
     }
   }
