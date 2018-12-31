@@ -6,7 +6,7 @@
             </div>
             <div class="footer-line">
               <a href="tel:<?php echo get_field("footer-phone", 83)?>" class="footer-link"><?php echo get_field("footer-phone", 83)?></a>
-              <a href="mailto:" class="footer-link"><?php echo get_field("footer-mail", 83)?></a>
+              <a href="mailto:<?php echo get_field("footer-mail", 83)?>" class="footer-link"><?php echo get_field("footer-mail", 83)?></a>
             </div>
             <div class="footer-line is__alt">
               <a href="#" class="footer-link is__alt">
