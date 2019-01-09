@@ -1,4 +1,4 @@
-﻿<?php get_header(); ?>
+<?php get_header(); ?>
 <header class="header">
 </header>
 <div class="banner">
@@ -95,7 +95,7 @@
     </div>
     <div class="form" id="formCut">
       <h3 class="popup-title">Бесплатная стрижка</h3>
-      <?php echo do_shortcode('[contact-form-7 id="97" title="Contact form 2"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="95" title="Contact form 2"]'); ?>
     </div>
   </div>
   <div class="gallery-buttons">
@@ -103,17 +103,16 @@
   </div>
 </div>
 <div class="brands">
-  <a href="<?php echo get_field("partner-1", 83)?>" class="brand">
+  <div class="brand">
     <img src="./images/MaleGrooming.svg" alt="">
-  </a>
-  <a href="<?php echo get_field("partner-2", 83)?>" class="brand">
+  </div>
+  <div class="brand">
     <img src="./images/FredPerry.svg" alt="">
-  </a>
-  <a href="<?php echo get_field("partner-3", 83)?>" class="brand">
+  </div>
+  <div class="brand">
     <img src="./images/Wahlshop.svg" alt="">
-  </a>
-  <a href="<?php echo get_field("partner-4", 83)?>" class="brand">
-    <img src="./images/Hitek.svg" alt="">
-  </a>
+  </div>
+  <div class="brand">
+  <img src="./images/Hitek.svg" alt="">
 </div>
 <?php get_footer(); ?>

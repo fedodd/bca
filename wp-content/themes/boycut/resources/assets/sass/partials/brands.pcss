@@ -10,10 +10,17 @@
 }
 
 .brand {
-  width: 50%;
+  display: block;
+  width: 50%; 
+  text-decoration: none;
+  transition: $time;
 
   @mixin respond-to desk {
     width: 25%;
+  }
+      
+  &:hover {
+    opacity: .5;
   }
 
   & img {
